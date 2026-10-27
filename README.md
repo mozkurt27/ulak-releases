@@ -25,10 +25,12 @@ Dosyayı doğrulamak için / To verify the file (PowerShell):
 Get-FileHash .\Ulak_1.0.0_x64-setup.exe -Algorithm SHA256
 ```
 
-## 1.0.0 ile gelenler / New in 1.0.0
+## Ulak 1.0.0 ile neler yapabilirsin / What Ulak 1.0.0 can do
 
-- cURL komutundan içe aktarma / Import from a cURL command
-- Digest ve OAuth 2.0 (client credentials, password, authorization code + PKCE)
-- Server-Sent Events ve NDJSON akışları / streams, event by event
-- WebSocket istekleri ve kayıtlı mesajlar / WebSocket requests and saved messages
-- Türkçe ve İngilizce arayüz / Turkish and English interface
+- Postman koleksiyon ve environment dosyalarını kayıpsız içe ve dışa aktarma / Import and export Postman collections and environments without loss
+- Swagger/OpenAPI belgesinden ve cURL komutundan istek oluşturma / Create requests from a Swagger/OpenAPI document or a cURL command
+- Environment, koleksiyon ve global değişkenler / Environment, collection and global variables
+- Bearer, Basic, API key, Digest ve OAuth 2.0 / Bearer, Basic, API key, Digest and OAuth 2.0
+- pm.* pre-request ve test script'leri / pm.* pre-request and test scripts
+- Server-Sent Events, NDJSON akışları ve WebSocket / Server-Sent Events, NDJSON streams and WebSocket
+- Gönderim geçmişi, komut paleti, dört tema, Türkçe ve İngilizce arayüz / Send history, command palette, four themes, Turkish and English interface
