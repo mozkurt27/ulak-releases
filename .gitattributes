@@ -1,0 +1,4 @@
+# Installers are stored byte for byte.
+*.exe binary
+*.dmg binary
+SHA256SUMS.txt text eol=lf

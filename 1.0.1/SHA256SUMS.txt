@@ -1,0 +1,2 @@
+b05e9fa0ebf7acd2f1e6776a8ae668804bf0cde08844d893aaf574a5ab07af85  Ulak_1.0.1_x64-setup.exe
+7ef38a658c6104814ef4d3451929dcadda64bcdcc036ee90520cbc660a45dce5  Ulak_1.0.1_universal.dmg
