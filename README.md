@@ -7,12 +7,12 @@ Site: https://ulak-client.duckdns.org
 
 Tüm sürümler / All releases: https://github.com/mozkurt27/ulak-releases/releases
 
-## Son sürüm / Latest: 1.0.1
+## Son sürüm / Latest: 1.0.2
 
 | Dosya / File | Platform | Boyut / Size | SHA-256 |
 |---|---|---|---|
-| [Ulak_1.0.1_x64-setup.exe](https://github.com/mozkurt27/ulak-releases/releases/download/v1.0.1/Ulak_1.0.1_x64-setup.exe) | Windows 10 / 11, 64 bit | 3,66 MB | `b05e9fa0ebf7acd2f1e6776a8ae668804bf0cde08844d893aaf574a5ab07af85` |
-| [Ulak_1.0.1_universal.dmg](https://github.com/mozkurt27/ulak-releases/releases/download/v1.0.1/Ulak_1.0.1_universal.dmg) | macOS 10.15+, Apple Silicon + Intel | 10,02 MB | `7ef38a658c6104814ef4d3451929dcadda64bcdcc036ee90520cbc660a45dce5` |
+| [Ulak_1.0.2_x64-setup.exe](https://github.com/mozkurt27/ulak-releases/releases/download/v1.0.2/Ulak_1.0.2_x64-setup.exe) | Windows 10 / 11, 64 bit | 3,66 MB | `b9819a1b169afc64e6bdbb9e501178b9f512230790537565a4bd4729eb72edb5` |
+| [Ulak_1.0.2_universal.dmg](https://github.com/mozkurt27/ulak-releases/releases/download/v1.0.2/Ulak_1.0.2_universal.dmg) | macOS 10.15+, Apple Silicon + Intel | 10,04 MB | `7705b3664e522a486c25ab99adfb130d3473862f94083c057da678ce0e555a93` |
 
 **Windows:** Microsoft Edge WebView2 gerekir (Windows 11'de hazır; yoksa kurulum indirir).
 Kurulum dosyası imzalı değil; SmartScreen uyarırsa "Ek bilgi" → "Yine de çalıştır".
@@ -28,19 +28,17 @@ account; if macOS warns on the first start, open System Settings → Privacy & S
 Dosyayı doğrulamak için / To verify a file:
 
 ```powershell
-Get-FileHash .\Ulak_1.0.1_x64-setup.exe -Algorithm SHA256
+Get-FileHash .\Ulak_1.0.2_x64-setup.exe -Algorithm SHA256
 ```
 
 ```sh
-shasum -a 256 Ulak_1.0.1_universal.dmg
+shasum -a 256 Ulak_1.0.2_universal.dmg
 ```
 
-## Ulak 1.0.1'de neler değişti / What changed in 1.0.1
+## Ulak 1.0.2'de neler değişti / What changed in 1.0.2
 
-- cURL olarak kopyala bütün header'ları yazıyor (Authorization, Content-Type, User-Agent, Accept dahil); Gönder'in yanında cURL düğmesi / Copy as cURL writes every header (Authorization, Content-Type, User-Agent, Accept included); a cURL button next to Send
-- Body'de yorum satırları (`//`, `/* */`, `<!-- -->`, GraphQL'de `#`) gönderilmez / Comments in the body (`//`, `/* */`, `<!-- -->`, `#` in GraphQL) are not sent
-- Script'lerden koleksiyon ve environment değişkenleri güncelleniyor; `setNextRequest` script'i durdurmuyor; daha fazla `pm.expect` ve `pm.response.to.be…` ifadesi / Scripts update collection and environment variables; `setNextRequest` no longer stops a script; more `pm.expect` and `pm.response.to.be…` assertions
-- macOS sürümü / macOS version
+- Görsel dönen cevaplar (PNG, JPEG, GIF, WebP …) Body'de görsel olarak gösteriliyor / Image responses (PNG, JPEG, GIF, WebP …) are shown as a picture in Body
+- Dosyaya kaydet görseli kendi uzantısıyla kaydediyor / Save to file keeps the image's own extension
 
 ## Ulak ile neler yapabilirsin / What Ulak can do
 
