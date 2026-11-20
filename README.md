@@ -7,12 +7,12 @@ Site: https://ulak-client.duckdns.org
 
 Tüm sürümler / All releases: https://github.com/mozkurt27/ulak-releases/releases
 
-## Son sürüm / Latest: 1.1.0
+## Son sürüm / Latest: 1.2.0
 
 | Dosya / File | Platform | Boyut / Size | SHA-256 |
 |---|---|---|---|
-| [Ulak_1.1.0_x64-setup.exe](https://github.com/mozkurt27/ulak-releases/releases/download/v1.1.0/Ulak_1.1.0_x64-setup.exe) | Windows 10 / 11, 64 bit | 3,73 MB | `3ed143b6e793660ed05c2e4f2152a4be7dd050b7710bd31cdabda812f3d1a842` |
-| [Ulak_1.1.0_universal.dmg](https://github.com/mozkurt27/ulak-releases/releases/download/v1.1.0/Ulak_1.1.0_universal.dmg) | macOS 10.15+, Apple Silicon + Intel | 10,22 MB | `a1820748211c60472203f40dd1f19e0749797fb9724d6f0ab1fdc1fd4fff3210` |
+| [Ulak_1.2.0_x64-setup.exe](https://github.com/mozkurt27/ulak-releases/releases/download/v1.2.0/Ulak_1.2.0_x64-setup.exe) | Windows 10 / 11, 64 bit | 3,78 MB | `471d874872077c2f586690a58eb2e9cc931c39765082a725482b03efc3f1388f` |
+| [Ulak_1.2.0_universal.dmg](https://github.com/mozkurt27/ulak-releases/releases/download/v1.2.0/Ulak_1.2.0_universal.dmg) | macOS 10.15+, Apple Silicon + Intel | 10,32 MB | `f9ed0332ec54bcfdf97e06c6951399cab11f27e7b40911e1d482c6b01369f2bc` |
 
 **Windows:** Microsoft Edge WebView2 gerekir (Windows 11'de hazır; yoksa kurulum indirir).
 Kurulum dosyası imzalı değil; SmartScreen uyarırsa "Ek bilgi" → "Yine de çalıştır".
@@ -28,19 +28,20 @@ account; if macOS warns on the first start, open System Settings → Privacy & S
 Dosyayı doğrulamak için / To verify a file:
 
 ```powershell
-Get-FileHash .\Ulak_1.1.0_x64-setup.exe -Algorithm SHA256
+Get-FileHash .\Ulak_1.2.0_x64-setup.exe -Algorithm SHA256
 ```
 
 ```sh
-shasum -a 256 Ulak_1.1.0_universal.dmg
+shasum -a 256 Ulak_1.2.0_universal.dmg
 ```
 
-## Ulak 1.1.0'da neler değişti / What changed in 1.1.0
+## Ulak 1.2.0'da neler değişti / What changed in 1.2.0
 
-- İsteğe bağlı hesap: uygulamadan kayıt, mail koduyla doğrulama, şifremi unuttum; giriş yapanın adı sağ üstte / Optional account: sign up in the app, verify with an e-mailed code, reset a forgotten password; your name shows at the top right
-- Collection ve environment sync'i: Ulak sunucusuna ya da seçtiğin bir klasöre, hesabının anahtarıyla şifreli / Collection and environment sync: to the Ulak server or a folder you pick, encrypted with your account's key
-- Açılışta ve saatte bir otomatik sync; çakışmada son değişiklik kazanır, diğer hali çöp kutusunda kalır / Automatic sync at start and every hour; the latest change wins, the other version stays in the trash
-- Sync geçmişi / Sync history
+- Hesap kodları artık gerçekten maile gidiyor / Account codes now really go out by e-mail
+- Sync yerine günlük yedek: açılışta ve saatte bir yalnız değişenler, son 30 gün; Ulak sunucusunda hesap başına 256 MB, klasörde sınır yok / Daily backups instead of sync: at start and every hour, only what changed, the last 30 days; 256 MB per account on the Ulak server, no limit in a folder
+- Yedekten yükle: kaynağı ve günü seç, collection ve environment'ları listeden işaretle; Ulak'ta olanın üzerine yazmadan önce sorar, eski hali çöp kutusuna kopyalar / Restore from backup: pick the source and the day, tick items from the list; asks before replacing and copies the old version to the trash
+- Yedek yerini değiştirince günler yeni yere taşınır; sunucudan klasöre geçince sunucudaki yedek silinir / Changing where backups go moves the days there; moving from the server to a folder deletes the server's copy
+- 1.1.0'ın sync'i yeni sunucuyla çalışmaz; 1.2.0'a güncelle / 1.1.0's sync does not work with the new server; update to 1.2.0
 
 ## Ulak ile neler yapabilirsin / What Ulak can do
 
