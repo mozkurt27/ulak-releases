@@ -7,12 +7,12 @@ Site: https://ulak-client.duckdns.org
 
 Tüm sürümler / All releases: https://github.com/mozkurt27/ulak-releases/releases
 
-## Son sürüm / Latest: 1.3.0
+## Son sürüm / Latest: 1.4.0
 
 | Dosya / File | Platform | Boyut / Size | SHA-256 |
 |---|---|---|---|
-| [Ulak_1.3.0_x64-setup.exe](https://github.com/mozkurt27/ulak-releases/releases/download/v1.3.0/Ulak_1.3.0_x64-setup.exe) | Windows 10 / 11, 64 bit | 4,43 MB | `2977727a8f303c0c14b118afe7be535f6b9f9fba52588c2447b4fc5ee4e95e30` |
-| [Ulak_1.3.0_universal.dmg](https://github.com/mozkurt27/ulak-releases/releases/download/v1.3.0/Ulak_1.3.0_universal.dmg) | macOS 10.15+, Apple Silicon + Intel | 12,01 MB | `2d7cb08d08af382df54ec98a068137ca6db6290ab69e9b5bd1b8ce7ca0a65ca1` |
+| [Ulak_1.4.0_x64-setup.exe](https://github.com/mozkurt27/ulak-releases/releases/download/v1.4.0/Ulak_1.4.0_x64-setup.exe) | Windows 10 / 11, 64 bit | 4,44 MB | `c5ef2d463c280e0c7e894756f9d5c836b90e487e19223642223ea835c83a5e87` |
+| [Ulak_1.4.0_universal.dmg](https://github.com/mozkurt27/ulak-releases/releases/download/v1.4.0/Ulak_1.4.0_universal.dmg) | macOS 10.15+, Apple Silicon + Intel | 12,03 MB | `78df85d4574825075bcac08bf5367530e19cadc30cdc04085c862401ae94f4fd` |
 
 **Windows:** Microsoft Edge WebView2 gerekir (Windows 11'de hazır; yoksa kurulum indirir).
 Kurulum dosyası imzalı değil; SmartScreen uyarırsa "Ek bilgi" → "Yine de çalıştır".
@@ -28,23 +28,20 @@ account; if macOS warns on the first start, open System Settings → Privacy & S
 Dosyayı doğrulamak için / To verify a file:
 
 ```powershell
-Get-FileHash .\Ulak_1.3.0_x64-setup.exe -Algorithm SHA256
+Get-FileHash .\Ulak_1.4.0_x64-setup.exe -Algorithm SHA256
 ```
 
 ```sh
-shasum -a 256 Ulak_1.3.0_universal.dmg
+shasum -a 256 Ulak_1.4.0_universal.dmg
 ```
 
-## Ulak 1.3.0'da neler değişti / What changed in 1.3.0
+## Ulak 1.4.0'da neler değişti / What changed in 1.4.0
 
-- Collection Runner: koleksiyon ya da klasörü sırayla çalıştır; tekrar, bekleme, CSV/JSON veri dosyası, setNextRequest; sonuçları JSON olarak dışa aktar / Collection Runner: run a collection or folder in order; iterations, delay, CSV/JSON data file, setNextRequest; export the results as JSON
-- Script'lerde pm.sendRequest (callback ve await) / pm.sendRequest in scripts (callback and await)
-- Kod olarak al: cURL, JavaScript, Node.js, Python, C#, Go, Java, PHP, HTTPie / Get as code: cURL, JavaScript, Node.js, Python, C#, Go, Java, PHP, HTTPie
-- Proxy (sistem ya da elle) ve istemci sertifikası (mTLS) ayarları / Proxy (system or manual) and client certificate (mTLS) settings
-- Cookie yöneticisi; cookie'ler uygulama kapanınca silinmiyor / Cookie manager; cookies stay when the app closes
-- AWS Signature auth / AWS Signature auth
-- Uygulama içi güncelleme: yeni sürüm çıkınca sorar, onaylarsan kurar; 1.2.0'dan 1.3.0'a bir kez elle geçilir / In-app updates: asks when a new version is out and installs it if you agree; moving from 1.2.0 to 1.3.0 is manual once
-- Yedeğe globals ve ayarlar da giriyor; proxy ve sertifikalar bilgisayarda kalıyor / Backups now include globals and settings; proxy and certificates stay on the computer
+- Yedekler önce sıkıştırılıp sonra şifreleniyor; yaklaşık 10 kat az yer / Backups are compressed, then encrypted; about 10 times smaller
+- Son 7 günün yedeği tutuluyor / The last 7 days of backups are kept
+- Ulak sunucusunda hesap başına 5 MB; sığmazsa yedekleri Local'e al / 5 MB per account on the Ulak server; if it does not fit, keep backups in a folder (Local)
+- 30 gün yedek gelmeyen hesabın sunucu yedekleri siliniyor; klasördekiler silinmiyor / An account with no backup for 30 days loses its server backups; folder backups are never removed
+- 1.3.0 kuruluysa Ulak bu güncellemeyi kendisi önerir / With 1.3.0 installed, Ulak offers this update itself
 
 ## Ulak ile neler yapabilirsin / What Ulak can do
 
